@@ -121,11 +121,11 @@
             this.yosmontLink.FlatAppearance.BorderSize = 0;
             this.yosmontLink.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.yosmontLink.Font = new System.Drawing.Font("MS Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.yosmontLink.Location = new System.Drawing.Point(708, 20);
+            this.yosmontLink.Location = new System.Drawing.Point(671, 20);
             this.yosmontLink.Name = "yosmontLink";
-            this.yosmontLink.Size = new System.Drawing.Size(186, 55);
+            this.yosmontLink.Size = new System.Drawing.Size(223, 55);
             this.yosmontLink.TabIndex = 6;
-            this.yosmontLink.Text = "create by yosmont";
+            this.yosmontLink.Text = "github repository link";
             this.yosmontLink.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.yosmontLink.UseVisualStyleBackColor = false;
             // 

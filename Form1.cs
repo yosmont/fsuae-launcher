@@ -57,7 +57,7 @@ namespace fsuae_launcher
         }
         private void OpenSocialLink(object sender, EventArgs e)
         {
-            OpenUrl("https://github.com/yosmont");
+            OpenUrl("https://github.com/yosmont/fsuae-launcher");
         }
 
         private void SelectedProfileChange(object sender, EventArgs e)
