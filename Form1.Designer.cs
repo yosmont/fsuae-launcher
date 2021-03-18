@@ -60,6 +60,7 @@
             this.profilDesc.Location = new System.Drawing.Point(526, 308);
             this.profilDesc.Multiline = true;
             this.profilDesc.Name = "profilDesc";
+            this.profilDesc.ReadOnly = true;
             this.profilDesc.Size = new System.Drawing.Size(324, 188);
             this.profilDesc.TabIndex = 1;
             this.profilDesc.Text = "profil desc";

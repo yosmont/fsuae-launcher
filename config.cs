@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
+using System.IO;
 
 namespace fsuae_launcher
 {
+    static class configPathConst
+    {
+        public const string bgmDir = "fsuaeLauncherData/bgm/";
+        public const string profilDir = "fsuaeLauncherData/profil/";
+    }
+
     public struct BGM
     {
         public string intro;
@@ -36,16 +43,16 @@ namespace fsuae_launcher
             XmlReader reader = XmlReader.Create(configFilepath);
             loadBGMConfig(reader);
             loadFSUAEConfig(reader);
-            loadProfilListConfig(reader);
+            loadProfilListConfig();
         }
 
         private void loadBGMConfig(XmlReader reader)
         {
             reader.ReadToFollowing("BGM");
-            reader.ReadToFollowing("intro");
-            bgm.intro = reader.ReadElementContentAsString();
+            //reader.ReadToFollowing("intro");
+            bgm.intro = /*configPathConst.bgmDir + reader.ReadElementContentAsString()*/ "";
             reader.ReadToFollowing("loop");
-            bgm.loop = reader.ReadElementContentAsString();
+            bgm.loop = configPathConst.bgmDir + reader.ReadElementContentAsString();
         }
 
         private void loadFSUAEConfig(XmlReader reader)
@@ -57,21 +64,24 @@ namespace fsuae_launcher
             fsuae.exec = reader.ReadElementContentAsString();
         }
 
-        private void loadProfilListConfig(XmlReader reader)
+        private void loadProfilListConfig()
         {
-            reader.ReadToFollowing("profilConfig");
             profilList = new List<profil>();
-            while (reader.ReadToFollowing("Item")) {
-                profil tmp = new profil();
-                reader.ReadToFollowing("ItemName");
-                tmp.name = reader.ReadElementContentAsString();
-                reader.ReadToFollowing("ItemDesc");
-                tmp.desc = reader.ReadElementContentAsString();
-                reader.ReadToFollowing("ItemCover");
-                tmp.cover = reader.ReadElementContentAsString();
-                reader.ReadToFollowing("ItemFsuaeConf");
-                tmp.fsuaeConf = reader.ReadElementContentAsString();
-                profilList.Add(tmp);
+            string[] profilFileList = Directory.GetFiles(configPathConst.profilDir);
+            foreach (string filepath in profilFileList) {
+                if (Path.GetExtension(filepath) == ".xml") {
+                    XmlReader reader = XmlReader.Create(filepath);
+                    profil tmp = new profil();
+                    reader.ReadToFollowing("Name");
+                    tmp.name = reader.ReadElementContentAsString();
+                    reader.ReadToFollowing("Desc");
+                    tmp.desc = reader.ReadElementContentAsString();
+                    reader.ReadToFollowing("Cover");
+                    tmp.cover = configPathConst.profilDir + reader.ReadElementContentAsString();
+                    reader.ReadToFollowing("FsuaeConf");
+                    tmp.fsuaeConf = configPathConst.profilDir + reader.ReadElementContentAsString();
+                    profilList.Add(tmp);
+                }
             }
         }
     }

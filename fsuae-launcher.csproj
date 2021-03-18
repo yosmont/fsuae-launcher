@@ -8,8 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="fsuaeLauncherData\profil\cover\" />
-    <Folder Include="fsuaeLauncherData\profil\confFile\" />
+    <Compile Remove="fsuaeLauncherData\**" />
+    <EmbeddedResource Remove="fsuaeLauncherData\**" />
+    <None Remove="fsuaeLauncherData\**" />
   </ItemGroup>
 
   <ItemGroup>
