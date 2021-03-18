@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <BGM>
+    <intro>fsuaeLauncherData/bgm/intro.wav</intro>
+    <loop>fsuaeLauncherData/bgm/loop.wav</loop>
+  </BGM>
+  <fsuae>
+    <installDir>fsuae/</installDir>
+    <exec>fs-uae.exe</exec>
+  </fsuae>
+  <profilConfig>
+    <Item>
+      <ItemName>Lemmings</ItemName>
+      <ItemDesc>(1st entry) A unique mindboggling game of multiple skill levels. Take command of the wackiest collection of misdirected rodents ever seen on your screen.</ItemDesc>
+      <ItemCover>fsuaeLauncherData/profil/cover/lemmings1cover.jpg</ItemCover>
+      <ItemFsuaeConf>fsuaeLauncherData/profil/confFile/Lemmings.fs-uae</ItemFsuaeConf>
+    </Item>
+    <Item>
+      <ItemName>Lemmings 2: Tribe</ItemName>
+      <ItemDesc>(2nd entry) By now, you'll probably be aware of the horrible plight the Lemmings face. Not only do they have to leave their lovely little hovels for good,but they also have to escape their island before they perish in the Darkness that's coming. Your objective therefore is to save as many Lemmings as possible from each tribe and help them escape the Island.</ItemDesc>
+      <ItemCover>fsuaeLauncherData/profil/cover/lemmings2cover.png</ItemCover>
+      <ItemFsuaeConf>fsuaeLauncherData/profil/confFile/Lemmings2.fs-uae</ItemFsuaeConf>
+    </Item>
+    <Item>
+      <ItemName>All New World of Lemmings</ItemName>
+      <ItemDesc>(3rd entry) They're back! Lead three Lemming Tribes (Egyptian, Classic and Shadow) as they attempt to tame new homelands. Featuring 90 levels of enhanced Lemming gameplay, larger Lemmings in crazy costumes, new objectives and, for the first time, bad guys to be confronted!</ItemDesc>
+      <ItemCover>fsuaeLauncherData/profil/cover/lemmings3cover.jpg</ItemCover>
+      <ItemFsuaeConf>fsuaeLauncherData/profil/confFile/Lemmings3.fs-uae</ItemFsuaeConf>
+    </Item>
+    <Item>
+      <ItemName>Holiday Lemmings</ItemName>
+      <ItemDesc>(1993 holiday special)</ItemDesc>
+      <ItemCover>fsuaeLauncherData/profil/cover/holidayLemmingsCover.jpg</ItemCover>
+      <ItemFsuaeConf>fsuaeLauncherData/profil/confFile/Lemmings4.fs-uae</ItemFsuaeConf>
+    </Item>
+    <Item>
+      <ItemName>Lemmings New Years 91-92</ItemName>
+      <ItemDesc>(Fan Made by Gaston^Splatt.)</ItemDesc>
+      <ItemCover>fsuaeLauncherData/profil/cover/lemmings1cover.jpg</ItemCover>
+      <ItemFsuaeConf>fsuaeLauncherData/profil/confFile/Lemmings5.fs-uae</ItemFsuaeConf>
+    </Item>
+  </profilConfig>
+</config>
